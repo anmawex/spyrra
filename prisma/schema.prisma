@@ -1,0 +1,61 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// User model - Usuarios del sistema
+model User {
+  id             String          @id @default(uuid())
+  email          String          @unique
+  name           String
+  phone          String?
+  createdAt      DateTime        @default(now())
+  updatedAt      DateTime        @updatedAt
+  creditRequests CreditRequest[]
+
+  @@map("users")
+}
+
+// CreditRequest model - Solicitudes de crédito
+model CreditRequest {
+  id                  String               @id @default(uuid())
+  userId              String
+  user                User                 @relation(fields: [userId], references: [id], onDelete: Cascade)
+  amount              Decimal              @db.Decimal(10, 2)
+  interestRate        Decimal              @db.Decimal(5, 2)
+  termMonths          Int
+  status              String               @default("pending") // pending, approved, rejected, active, completed
+  requestDate         DateTime             @default(now())
+  approvalDate        DateTime?
+  createdAt           DateTime             @default(now())
+  updatedAt           DateTime             @updatedAt
+  paymentInstallments PaymentInstallment[]
+
+  @@map("credit_requests")
+}
+
+// PaymentInstallment model - Cuotas de pago
+model PaymentInstallment {
+  id              String        @id @default(uuid())
+  creditRequestId String
+  creditRequest   CreditRequest @relation(fields: [creditRequestId], references: [id], onDelete: Cascade)
+  installmentNumber Int
+  dueDate         DateTime
+  amount          Decimal       @db.Decimal(10, 2)
+  principal       Decimal       @db.Decimal(10, 2)
+  interest        Decimal       @db.Decimal(10, 2)
+  status          String        @default("pending") // pending, paid, overdue
+  paidDate        DateTime?
+  createdAt       DateTime      @default(now())
+  updatedAt       DateTime      @updatedAt
+
+  @@unique([creditRequestId, installmentNumber])
+  @@map("payment_installments")
+}

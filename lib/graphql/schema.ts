@@ -59,6 +59,28 @@ export const typeDefs = gql`
     status: String!
   }
 
+  input SubmitLoanInput {
+    fullName: String!
+    email: String!
+    phone: String!
+    salary: Float!
+    idDocument: String!
+    idIssueDate: String!
+    amount: Float!
+    termMonths: Int!
+  }
+
+  type LoanDecisionResponse {
+    success: Boolean!
+    message: String!
+    status: String!
+    interestRate: Float
+    monthlyPayment: Float
+    totalPayment: Float
+    creditRequestId: String
+    paymentPlan: [PaymentInstallment]
+  }
+
   type Query {
     users: [User!]!
     user(id: ID!): User
@@ -72,5 +94,6 @@ export const typeDefs = gql`
     createUser(input: CreateUserInput!): User!
     createCreditRequest(input: CreateCreditRequestInput!): CreditRequest!
     updateCreditRequestStatus(input: UpdateCreditRequestStatusInput!): CreditRequest!
+    submitLoanApplication(input: SubmitLoanInput!): LoanDecisionResponse!
   }
 `

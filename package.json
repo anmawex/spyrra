@@ -13,6 +13,7 @@
     "prisma:push": "prisma db push"
   },
   "dependencies": {
+    "@apollo/client": "^4.1.4",
     "@apollo/server": "^5.4.0",
     "@as-integrations/next": "^4.1.0",
     "@hookform/resolvers": "^5.2.2",

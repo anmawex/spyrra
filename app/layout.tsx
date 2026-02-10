@@ -20,6 +20,10 @@ export const metadata: Metadata = {
   },
 }
 
+import { DemoBanner } from '@/components/ui/DemoBanner'
+
+/* ... */
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -30,6 +34,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <DemoBanner />
         {children}
       </body>
     </html>

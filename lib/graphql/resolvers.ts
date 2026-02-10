@@ -1,5 +1,5 @@
 import { prisma } from '../prisma'
-import { evaluateCreditRisk, generateAmortizationSchedule, PaymentPlanItem } from '@/lib/services/creditScoring'
+import { evaluateCreditRisk, generateAmortizationSchedule, PaymentPlanItem } from '@/features/loans/logic/creditScoring'
 
 export const resolvers = {
   Query: {

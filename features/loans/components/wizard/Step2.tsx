@@ -2,8 +2,8 @@
 
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
-import { useLoanStore } from '@/lib/store/useLoanStore'
-import { identitySchema, IdentityInputs } from '@/lib/validators'
+import { useLoanStore } from '@/features/loans/store/useLoanStore'
+import { identitySchema, IdentityInputs } from '@/features/loans/logic/validators'
 import clsx from 'clsx'
 
 export function Step2Identity() {

@@ -1,6 +1,7 @@
 'use client'
 
-import { useLoanStore } from '@/lib/store/useLoanStore'
+import { useState, useEffect } from 'react'
+import { useLoanStore } from '@/features/loans/store/useLoanStore'
 import { Banknote, Clock, Percent } from 'lucide-react'
 
 // Utilidad para formatear dinero

@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { useLoanStore } from '@/lib/store/useLoanStore'
+import { useLoanStore } from '@/features/loans/store/useLoanStore'
 import { CheckCircle, ArrowLeft, Loader2, AlertCircle, XCircle } from 'lucide-react'
 
 // Mutación en formato texto plano (No necesitamos gql tag ni dependencias)

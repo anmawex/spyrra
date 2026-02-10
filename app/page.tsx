@@ -1,16 +1,16 @@
 'use client'
 
-import { CreditSlider } from '@/components/ui/CreditSlider'
+import { CreditSlider } from '@/features/loans/components/CreditSlider'
 import dynamic from 'next/dynamic'
-import { Step1PersonalInfo } from '@/components/wizard/Step1'
-import { Step2Identity } from '@/components/wizard/Step2'
+import { Step1PersonalInfo } from '@/features/loans/components/wizard/Step1'
+import { Step2Identity } from '@/features/loans/components/wizard/Step2'
 
 // Importación dinámica para evitar conflictos de SSR con Apollo Client
-const Step3Summary = dynamic(() => import('@/components/wizard/Step3').then(mod => mod.Step3Summary), { 
+const Step3Summary = dynamic(() => import('@/features/loans/components/wizard/Step3').then(mod => mod.Step3Summary), { 
   ssr: false,
   loading: () => <div className="p-8 text-center text-gray-400">Cargando resumen...</div>
 })
-import { useLoanStore } from '@/lib/store/useLoanStore'
+import { useLoanStore } from '@/features/loans/store/useLoanStore'
 import { CheckCircle, CircleDot, Circle } from 'lucide-react'
 
 // Componente para la barra de progreso

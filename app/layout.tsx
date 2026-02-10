@@ -15,6 +15,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: 'Spyrra - Tu Crédito al Instante',
   description: 'Solicita tu crédito en minutos, sin papeleos y 100% online.',
+  icons: {
+    icon: '/spyrra.svg',
+  },
 }
 
 export default function RootLayout({

@@ -88,6 +88,7 @@ export const typeDefs = gql`
     creditRequest(id: ID!): CreditRequest
     userCreditRequests(userId: ID!): [CreditRequest!]!
     paymentInstallments(creditRequestId: ID!): [PaymentInstallment!]!
+    userByEmail(email: String!): User
   }
 
   type Mutation {
@@ -95,5 +96,6 @@ export const typeDefs = gql`
     createCreditRequest(input: CreateCreditRequestInput!): CreditRequest!
     updateCreditRequestStatus(input: UpdateCreditRequestStatusInput!): CreditRequest!
     submitLoanApplication(input: SubmitLoanInput!): LoanDecisionResponse!
+    payInstallment(id: ID!): PaymentInstallment!
   }
 `

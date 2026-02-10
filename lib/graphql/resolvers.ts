@@ -57,6 +57,21 @@ export const resolvers = {
         },
       })
     },
+
+    userByEmail: async (_: any, { email }: { email: string }) => {
+      return await prisma.user.findUnique({
+        where: { email },
+        include: {
+          creditRequests: {
+            include: {
+              paymentInstallments: {
+                orderBy: { installmentNumber: 'asc' }
+              }
+            }
+          },
+        },
+      })
+    },
   },
 
   Mutation: {
@@ -204,7 +219,32 @@ export const resolvers = {
           paymentPlan: []
         }
       }
-    }
+    },
+
+    payInstallment: async (_: any, { id }: { id: string }) => {
+      const installment = await prisma.paymentInstallment.findUnique({
+        where: { id }
+      })
+
+      if (!installment) {
+        throw new Error('Cuota no encontrada')
+      }
+
+      if (installment.status === 'paid') {
+        throw new Error('Esta cuota ya ha sido pagada')
+      }
+
+      return await prisma.paymentInstallment.update({
+        where: { id },
+        data: {
+          status: 'paid',
+          paidDate: new Date()
+        },
+        include: {
+          creditRequest: true
+        }
+      })
+    },
   },
 
   User: {

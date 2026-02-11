@@ -6,7 +6,7 @@ export function Features() {
       title: 'Análisis de Riesgo en Tiempo Real',
       description: 'Nuestro motor de decisiones evalúa tu perfil financiero instantáneamente para calcular tu capacidad de pago sin esperas.',
       icon: Brain,
-      color: 'bg-indigo-100 text-indigo-600',
+      color: 'bg-orange-100 text-orange-600',
     },
     {
       title: 'Verificación de Identidad Digital',
@@ -18,13 +18,13 @@ export function Features() {
       title: 'Simulación de Desembolso',
       description: 'Experimenta la rapidez de una fintech moderna. Una vez aprobado, el sistema simula la transferencia de fondos al instante.',
       icon: Zap,
-      color: 'bg-yellow-100 text-yellow-600',
+      color: 'bg-amber-100 text-amber-600',
     },
     {
       title: 'Seguridad de Datos',
       description: 'Tu información está protegida. Implementamos estándares de validación y manejo seguro de datos personales.',
       icon: ShieldCheck,
-      color: 'bg-blue-100 text-blue-600',
+      color: 'bg-cyan-100 text-cyan-600',
     },
   ]
 

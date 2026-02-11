@@ -29,7 +29,7 @@ export function Step2Identity() {
 
   // Estilo base para Input (similar al componente UI)
   const inputClass = clsx(
-    "mt-1 block w-full px-4 py-3 bg-white/50 backdrop-blur-sm border rounded-xl shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 outline-none hover:bg-white"
+    "mt-1 block w-full px-4 py-3 bg-white/50 backdrop-blur-sm border rounded-xl shadow-sm focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-all duration-200 outline-none hover:bg-white"
   )
 
   const errorClass = "mt-1 text-sm text-red-500 font-medium animate-pulse"
@@ -38,15 +38,15 @@ export function Step2Identity() {
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-8 animate-fadeIn">
       <div className="space-y-6">
         <div className="flex items-center gap-3 border-b border-gray-100 pb-4">
-          <div className="bg-blue-100 p-2 rounded-lg">
-            <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0m-5 8a2 2 0 100-4 2 2 0 000 4zm0 0c1.306 0 2.417.835 2.83 2M9 14a3.001 3.001 0 00-2.83 2M15 11h3m-3 4h2" /></svg>
+          <div className="bg-orange-100 p-2 rounded-lg">
+            <svg className="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0m-5 8a2 2 0 100-4 2 2 0 000 4zm0 0c1.306 0 2.417.835 2.83 2M9 14a3.001 3.001 0 00-2.83 2M15 11h3m-3 4h2" /></svg>
           </div>
           <h3 className="text-xl font-bold text-gray-800">Identificación Oficial</h3>
         </div>
 
         {/* Documento */}
         <div className="group">
-          <label className="block text-sm font-semibold text-gray-700 group-hover:text-blue-600 transition-colors">
+          <label className="block text-sm font-semibold text-gray-700 group-hover:text-orange-600 transition-colors">
             Número de Cédula
           </label>
           <input
@@ -60,7 +60,7 @@ export function Step2Identity() {
 
         {/* Fecha de Expedición */}
         <div className="group">
-          <label className="block text-sm font-semibold text-gray-700 group-hover:text-blue-600 transition-colors">
+          <label className="block text-sm font-semibold text-gray-700 group-hover:text-orange-600 transition-colors">
             Fecha de Expedición
           </label>
           <input
@@ -87,7 +87,7 @@ export function Step2Identity() {
           className={clsx(
             "px-8 py-3 rounded-xl font-bold text-white shadow-lg transition-all duration-300 flex items-center gap-2",
             isValid
-              ? "bg-gradient-to-r from-blue-600 to-indigo-600 hover:shadow-blue-500/30 hover:scale-105 active:scale-95"
+              ? "bg-gradient-to-r from-orange-600 to-red-600 hover:shadow-orange-500/30 hover:scale-105 active:scale-95"
               : "bg-gray-300 cursor-not-allowed shadow-none grayscale"
           )}
         >

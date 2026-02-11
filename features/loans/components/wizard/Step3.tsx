@@ -86,16 +86,16 @@ export function Step3Summary() {
         </p>
 
         {isApproved && (
-          <div className="bg-blue-50 border border-blue-100 rounded-xl p-6 max-w-sm mx-auto shadow-sm">
-            <h3 className="font-semibold text-blue-900 mb-4 border-b border-blue-200 pb-2">Tu Plan Aprobado</h3>
+          <div className="bg-orange-50 border border-orange-100 rounded-xl p-6 max-w-sm mx-auto shadow-sm">
+            <h3 className="font-semibold text-orange-900 mb-4 border-b border-orange-200 pb-2">Tu Plan Aprobado</h3>
             <div className="space-y-3 text-sm">
               <div className="flex justify-between">
-                <span className="text-blue-700">Tasa Mensual</span>
-                <span className="font-bold text-blue-900">{result.interestRate}%</span>
+                <span className="text-orange-700">Tasa Mensual</span>
+                <span className="font-bold text-orange-900">{result.interestRate}%</span>
               </div>
               <div className="flex justify-between">
-                <span className="text-blue-700">Cuota Fija Aprox.</span>
-                <span className="font-bold text-blue-900 text-lg">
+                <span className="text-orange-700">Cuota Fija Aprox.</span>
+                <span className="font-bold text-orange-900 text-lg">
                   ${result.monthlyPayment?.toLocaleString()}
                 </span>
               </div>
@@ -105,7 +105,7 @@ export function Step3Summary() {
 
         <button 
           onClick={() => window.location.reload()} 
-          className="mt-8 text-blue-600 hover:text-blue-800 font-medium underline"
+          className="mt-8 text-orange-600 hover:text-orange-800 font-medium underline"
         >
           Iniciar Nueva Solicitud
         </button>
@@ -117,8 +117,8 @@ export function Step3Summary() {
   return (
     <div className="space-y-8 animate-fadeIn">
       <div className="text-center space-y-2">
-        <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-          <CheckCircle className="w-8 h-8 text-blue-600" />
+        <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+          <CheckCircle className="w-8 h-8 text-orange-600" />
         </div>
         <h2 className="text-2xl font-bold text-gray-900">Confirmar Datos</h2>
         <p className="text-gray-500">Todo listo para enviar tu solicitud</p>
@@ -126,14 +126,14 @@ export function Step3Summary() {
 
       {/* Tarjeta de Resumen */}
       <div className="bg-white border rounded-xl shadow-lg overflow-hidden divide-y divide-gray-100">
-        <div className="p-6 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
+        <div className="p-6 bg-gradient-to-r from-orange-600 to-red-600 text-white">
           <div className="grid grid-cols-2 gap-4">
             <div>
-              <p className="text-blue-100 text-xs uppercase tracking-wider font-semibold">Monto</p>
+              <p className="text-orange-100 text-xs uppercase tracking-wider font-semibold">Monto</p>
               <p className="text-3xl font-bold">${loanAmount.toLocaleString()}</p>
             </div>
             <div className="text-right">
-              <p className="text-blue-100 text-xs uppercase tracking-wider font-semibold">Plazo</p>
+              <p className="text-orange-100 text-xs uppercase tracking-wider font-semibold">Plazo</p>
               <p className="text-xl font-bold">{termMonths} Meses</p>
             </div>
           </div>

@@ -7,7 +7,7 @@ export function Footer() {
         
         {/* Logo y Copyright */}
         <div className="text-center lg:text-left">
-          <h2 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-indigo-400">
+          <h2 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-orange-400 to-amber-400">
             Spyrra
           </h2>
           <p className="mt-2 text-sm">

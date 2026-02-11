@@ -35,14 +35,14 @@ export function CreditSlider() {
       {/* Header del Slider */}
       <div className="flex items-center justify-between">
         <div>
-          <h2 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-            Calcula tu Préstamo
-          </h2>
+        <h2 className="text-2xl font-bold bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent">
+          Calcula tu Préstamo
+        </h2>
           <p className="text-gray-500 text-sm mt-1">
             Elige el monto y plazo ideal para ti
           </p>
         </div>
-        <div className="p-3 bg-blue-50 rounded-full text-blue-600 shadow-inner">
+        <div className="p-3 bg-orange-50 rounded-full text-orange-600 shadow-inner">
           <Banknote className="w-8 h-8" />
         </div>
       </div>
@@ -51,7 +51,7 @@ export function CreditSlider() {
       <div className="space-y-4">
         <label className="flex justify-between items-center text-sm font-medium text-gray-700">
           <span>Monto Solicitado</span>
-          <span className="text-2xl font-bold text-blue-600">
+          <span className="text-2xl font-bold text-orange-600">
             {formatCurrency(loanAmount)}
           </span>
         </label>
@@ -63,7 +63,7 @@ export function CreditSlider() {
           step={STEP_AMOUNT}
           value={loanAmount}
           onChange={(e) => setLoanAmount(Number(e.target.value))}
-          className="w-full h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-600 hover:accent-blue-700 transition-all focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+          className="w-full h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-orange-600 hover:accent-orange-700 transition-all focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-opacity-50"
         />
         
         <div className="flex justify-between text-xs text-gray-400 font-medium">
@@ -79,7 +79,7 @@ export function CreditSlider() {
             <Clock className="w-4 h-4 text-gray-400" />
             <span>Elige tu Plazo</span>
           </div>
-          <span className="text-blue-600 font-bold">{termMonths} Meses</span>
+          <span className="text-orange-600 font-bold">{termMonths} Meses</span>
         </div>
         
         <div className="grid grid-cols-3 sm:grid-cols-6 gap-2">
@@ -90,7 +90,7 @@ export function CreditSlider() {
               className={`
                 py-2 px-1 rounded-lg text-sm font-semibold transition-all duration-200
                 ${termMonths === term 
-                  ? 'bg-blue-600 text-white shadow-lg scale-105 transform' 
+                  ? 'bg-orange-600 text-white shadow-lg scale-105 transform' 
                   : 'bg-gray-100 text-gray-600 hover:bg-gray-200 hover:text-gray-900'}
               `}
             >
@@ -101,7 +101,7 @@ export function CreditSlider() {
       </div>
 
       {/* Resumen de Cuota */}
-      <div className="bg-gradient-to-br from-indigo-50 to-blue-50 rounded-xl p-6 border border-blue-100 shadow-sm">
+      <div className="bg-gradient-to-br from-orange-50 to-amber-50 rounded-xl p-6 border border-orange-100 shadow-sm">
         <div className="flex justify-between items-end">
           <div>
             <p className="text-sm text-gray-500 font-medium">Cuota Mensual Estimada</p>

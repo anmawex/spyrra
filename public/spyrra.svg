@@ -7,8 +7,8 @@
   <defs>
     <!-- Gradiente fintech -->
     <linearGradient id="spyrraIconGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#00C2A8"/>
-      <stop offset="100%" stop-color="#6A5CFF"/>
+      <stop offset="0%" stop-color="#F97316"/>
+      <stop offset="100%" stop-color="#DC2626"/>
     </linearGradient>
   </defs>
 

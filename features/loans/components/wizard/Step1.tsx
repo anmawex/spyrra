@@ -42,7 +42,7 @@ export function Step1PersonalInfo() {
           <input 
             {...register('fullName')}
             className={clsx(
-              "mt-1 block w-full px-4 py-2 border rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 transition-colors",
+              "mt-1 block w-full px-4 py-2 border rounded-md shadow-sm focus:ring-orange-500 focus:border-orange-500 transition-colors",
               errors.fullName ? "border-red-500 focus:border-red-500" : "border-gray-300"
             )}
             placeholder="Ej: Juan Pérez"
@@ -57,7 +57,7 @@ export function Step1PersonalInfo() {
             {...register('email')}
             type="email"
             className={clsx(
-              "mt-1 block w-full px-4 py-2 border rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 transition-colors",
+              "mt-1 block w-full px-4 py-2 border rounded-md shadow-sm focus:ring-orange-500 focus:border-orange-500 transition-colors",
               errors.email ? "border-red-500 focus:border-red-500" : "border-gray-300"
             )}
             placeholder="juan@ejemplo.com"
@@ -72,7 +72,7 @@ export function Step1PersonalInfo() {
             {...register('phone')}
             type="tel"
             className={clsx(
-              "mt-1 block w-full px-4 py-2 border rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 transition-colors",
+              "mt-1 block w-full px-4 py-2 border rounded-md shadow-sm focus:ring-orange-500 focus:border-orange-500 transition-colors",
               errors.phone ? "border-red-500 focus:border-red-500" : "border-gray-300"
             )}
             placeholder="+57 300 123 4567"
@@ -91,7 +91,7 @@ export function Step1PersonalInfo() {
               {...register('salary', { valueAsNumber: true })} // Forzar número
               type="number"
               className={clsx(
-                "block w-full rounded-md border pl-7 pr-12 py-2 focus:border-blue-500 focus:ring-blue-500 sm:text-sm transition-colors",
+                "block w-full rounded-md border pl-7 pr-12 py-2 focus:border-orange-500 focus:ring-orange-500 sm:text-sm transition-colors",
                 errors.salary ? "border-red-500 focus:border-red-500" : "border-gray-300"
               )}
               placeholder="0.00"
@@ -108,7 +108,7 @@ export function Step1PersonalInfo() {
           className={clsx(
             "w-full sm:w-auto px-6 py-2 rounded-lg font-medium text-white transition-all duration-200 shadow-md",
             isValid 
-              ? "bg-blue-600 hover:bg-blue-700 hover:shadow-lg transform hover:-translate-y-0.5" 
+              ? "bg-orange-600 hover:bg-orange-700 hover:shadow-lg transform hover:-translate-y-0.5" 
               : "bg-gray-300 cursor-not-allowed text-gray-500 shadow-none"
           )}
         >

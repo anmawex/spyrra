@@ -138,7 +138,7 @@ export function ClientDashboard() {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4 relative">
         <div className="absolute top-4 left-4">
-          <Link href="/" className="flex items-center gap-2 text-gray-500 hover:text-blue-600 font-medium transition-colors bg-white px-4 py-2 rounded-full shadow-sm hover:shadow-md border border-gray-100">
+          <Link href="/" className="flex items-center gap-2 text-gray-500 hover:text-orange-600 font-medium transition-colors bg-white px-4 py-2 rounded-full shadow-sm hover:shadow-md border border-gray-100">
             <ArrowLeft className="w-4 h-4" />
             <span className="text-sm">Volver al Inicio</span>
           </Link>
@@ -157,7 +157,7 @@ export function ClientDashboard() {
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 transition-colors"
+                className="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-orange-500 focus:border-orange-500 transition-colors"
                 placeholder="ejemplo@email.com"
                 required
               />
@@ -194,7 +194,7 @@ export function ClientDashboard() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex justify-between items-center">
           <div className="flex items-center gap-4">
             <Link href="/" className="p-2 -ml-2 rounded-full hover:bg-gray-100 transition-colors group" title="Volver al inicio">
-               <ArrowLeft className="w-5 h-5 text-gray-400 group-hover:text-blue-600 transition-colors" />
+               <ArrowLeft className="w-5 h-5 text-gray-400 group-hover:text-orange-600 transition-colors" />
             </Link>
             <div>
               <h1 className="text-2xl font-bold text-gray-900">Hola, {userData?.name} 👋</h1>
@@ -239,10 +239,10 @@ export function ClientDashboard() {
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 {/* Info Principal */}
                 <div className="lg:col-span-1 space-y-6">
-                  <div className="bg-gradient-to-br from-blue-600 to-indigo-700 rounded-2xl shadow-xl p-6 text-white text-card">
+                  <div className="bg-gradient-to-br from-orange-600 to-red-600 rounded-2xl shadow-xl p-6 text-white text-card">
                     <div className="flex justify-between items-start mb-8">
                       <div>
-                        <p className="text-blue-100 text-sm font-medium">Crédito Activo</p>
+                        <p className="text-orange-100 text-sm font-medium">Crédito Activo</p>
                         <h2 className="text-3xl font-bold mt-1">${activeLoan.amount.toLocaleString()}</h2>
                       </div>
                       <span className="bg-white/20 px-3 py-1 rounded-full text-xs font-semibold backdrop-blur-sm uppercase">
@@ -252,7 +252,7 @@ export function ClientDashboard() {
                     
                     <div className="space-y-4">
                       <div className="flex justify-between items-center text-sm border-b border-white/10 pb-2">
-                        <span className="text-blue-100">Interés Mensual</span>
+                        <span className="text-orange-100">Interés Mensual</span>
                         <span className="font-semibold">{activeLoan.interestRate}%</span>
                       </div>
                       <div className="flex justify-between items-center text-sm border-b border-white/10 pb-2">

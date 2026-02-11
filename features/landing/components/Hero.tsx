@@ -6,19 +6,19 @@ export function Hero() {
   return (
     <section className="relative overflow-hidden bg-white pt-16 pb-32 space-y-24">
       {/* Background Decorativo */}
-      <div className="absolute top-0 left-1/2 -ml-[40rem] w-[80rem] h-[80rem] rounded-full bg-gradient-to-tr from-blue-50 to-indigo-50 blur-3xl opacity-50 -z-10 animate-pulse" />
+      <div className="absolute top-0 left-1/2 -ml-[40rem] w-[80rem] h-[80rem] rounded-full bg-gradient-to-tr from-orange-50 to-amber-50 blur-3xl opacity-50 -z-10 animate-pulse" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 text-blue-600 text-sm font-medium mb-6 animate-fadeIn">
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-50 text-orange-600 text-sm font-medium mb-6 animate-fadeIn">
           <span className="relative flex h-2 w-2">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-orange-500"></span>
           </span>
           Nueva tecnología de aprobación en segundos
         </div>
 
         <h1 className="text-5xl md:text-7xl font-extrabold text-gray-900 tracking-tight mb-8 max-w-4xl mx-auto leading-tight animate-slideInLeft">
-          El futuro del crédito es <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">instantáneo</span>.
+          El futuro del crédito es <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-red-600">instantáneo</span>.
         </h1>
         
         <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-10 animate-slideInRight delay-100">
@@ -28,7 +28,7 @@ export function Hero() {
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fadeIn delay-200">
           <Link href="/solicitar">
-            <Button size="lg" className="h-14 px-8 text-lg rounded-full shadow-lg shadow-blue-500/30 hover:shadow-blue-500/50 transition-all transform hover:-translate-y-1">
+            <Button size="lg" className="h-14 px-8 text-lg rounded-full shadow-lg shadow-orange-500/30 hover:shadow-orange-500/50 transition-all transform hover:-translate-y-1">
               Solicitar mi Cupo Ahora <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
           </Link>

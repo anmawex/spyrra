@@ -29,7 +29,7 @@ const WizardHeader = ({ step }: { step: number }) => {
           {/* Línea conectora */}
           {idx < 2 && (
             <div className={`absolute top-4 left-1/2 w-full h-[2px] transition-colors duration-500 ease-in-out ${
-              step > s.num ? 'bg-blue-600' : 'bg-gray-200'
+              step > s.num ? 'bg-orange-600' : 'bg-gray-200'
             }`} />
           )}
 
@@ -37,14 +37,14 @@ const WizardHeader = ({ step }: { step: number }) => {
           <div className={`
             relative z-10 w-9 h-9 rounded-full flex items-center justify-center font-bold text-sm transition-all duration-300
             ${step >= s.num 
-              ? 'bg-blue-600 text-white shadow-blue-500/30 shadow-lg scale-110' 
+              ? 'bg-orange-600 text-white shadow-orange-500/30 shadow-lg scale-110' 
               : 'bg-white text-gray-400 border-2 border-gray-200'}
           `}>
              {step > s.num ? <CheckCircle className="w-5 h-5" /> : s.num}
           </div>
           
           <span className={`mt-3 text-xs font-semibold uppercase tracking-wider transition-colors ${
-            step >= s.num ? 'text-blue-600' : 'text-gray-400'
+            step >= s.num ? 'text-orange-600' : 'text-gray-400'
           }`}>
             {s.label}
           </span>
@@ -58,11 +58,11 @@ export function LoanApplication() {
   const { currentStep } = useLoanStore()
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50/30 flex flex-col items-center py-12 px-4 sm:px-6 lg:px-8 relative">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-orange-50/30 flex flex-col items-center py-12 px-4 sm:px-6 lg:px-8 relative">
       
       {/* Botón Volver */}
       <div className="absolute top-4 left-4 z-10">
-        <Link href="/" className="flex items-center gap-2 text-gray-500 hover:text-blue-600 font-medium transition-colors bg-white/50 hover:bg-white px-4 py-2 rounded-full backdrop-blur-sm border border-transparent hover:border-gray-200">
+        <Link href="/" className="flex items-center gap-2 text-gray-500 hover:text-orange-600 font-medium transition-colors bg-white/50 hover:bg-white px-4 py-2 rounded-full backdrop-blur-sm border border-transparent hover:border-gray-200">
           <ArrowLeft className="w-4 h-4" />
           <span className="text-sm">Volver al Inicio</span>
         </Link>

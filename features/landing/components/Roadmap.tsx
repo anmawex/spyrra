@@ -12,7 +12,7 @@ export function Roadmap() {
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
           
           <div className="lg:w-1/2">
-            <h2 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600 sm:text-4xl mb-6">
+            <h2 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-orange-600 to-amber-600 sm:text-4xl mb-6">
               Más que un préstamo.<br />
               Un ecosistema financiero.
             </h2>
@@ -25,12 +25,12 @@ export function Roadmap() {
             <div className="relative border-l-2 border-gray-100 pl-8 space-y-10">
               {roadmap.map((item, idx) => (
                 <div key={item.period} className="relative group">
-                  <div className={`absolute -left-[39px] flex items-center justify-center w-6 h-6 rounded-full border-2 bg-white transition-all duration-300 z-10 ${item.completed ? 'border-blue-600 scale-110' : 'border-gray-200 group-hover:border-blue-300'}`}>
-                    {item.completed && <div className="w-2 h-2 rounded-full bg-blue-600" />}
+                  <div className={`absolute -left-[39px] flex items-center justify-center w-6 h-6 rounded-full border-2 bg-white transition-all duration-300 z-10 ${item.completed ? 'border-orange-600 scale-110' : 'border-gray-200 group-hover:border-orange-300'}`}>
+                    {item.completed && <div className="w-2 h-2 rounded-full bg-orange-600" />}
                   </div>
                   
                   <div>
-                    <span className={`text-xs font-bold uppercase tracking-wider mb-1 block ${item.completed ? 'text-blue-600' : 'text-gray-400'}`}>
+                    <span className={`text-xs font-bold uppercase tracking-wider mb-1 block ${item.completed ? 'text-orange-600' : 'text-gray-400'}`}>
                       {item.period}
                     </span>
                     <h3 className={`text-xl font-bold ${item.completed ? 'text-gray-900' : 'text-gray-400 group-hover:text-gray-600 transition-colors'}`}>

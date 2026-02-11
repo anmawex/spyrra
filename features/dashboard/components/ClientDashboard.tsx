@@ -1,9 +1,10 @@
 'use client'
 
 import { useState } from 'react'
+import Link from 'next/link'
 import { Skeleton } from '@/components/ui/Skeleton'
 import { Button } from '@/components/ui/Button'
-import { CreditCard, Calendar, CheckCircle, AlertCircle, RefreshCw } from 'lucide-react'
+import { CreditCard, Calendar, CheckCircle, AlertCircle, RefreshCw, ArrowLeft } from 'lucide-react'
 
 // --- Tipos ---
 interface PaymentInstallment {
@@ -135,7 +136,14 @@ export function ClientDashboard() {
   // --- Vista Login ---
   if (!isLoggedIn) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
+      <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4 relative">
+        <div className="absolute top-4 left-4">
+          <Link href="/" className="flex items-center gap-2 text-gray-500 hover:text-blue-600 font-medium transition-colors bg-white px-4 py-2 rounded-full shadow-sm hover:shadow-md border border-gray-100">
+            <ArrowLeft className="w-4 h-4" />
+            <span className="text-sm">Volver al Inicio</span>
+          </Link>
+        </div>
+
         <div className="max-w-md w-full bg-white rounded-xl shadow-lg p-8 space-y-6">
           <div className="text-center">
             <h1 className="text-2xl font-bold text-gray-900">Acceso Clientes</h1>
@@ -184,9 +192,14 @@ export function ClientDashboard() {
       {/* Header */}
       <div className="bg-white shadow">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex justify-between items-center">
-          <div>
-            <h1 className="text-2xl font-bold text-gray-900">Hola, {userData?.name} 👋</h1>
-            <p className="text-sm text-gray-500">Bienvenido a tu panel financiero</p>
+          <div className="flex items-center gap-4">
+            <Link href="/" className="p-2 -ml-2 rounded-full hover:bg-gray-100 transition-colors group" title="Volver al inicio">
+               <ArrowLeft className="w-5 h-5 text-gray-400 group-hover:text-blue-600 transition-colors" />
+            </Link>
+            <div>
+              <h1 className="text-2xl font-bold text-gray-900">Hola, {userData?.name} 👋</h1>
+              <p className="text-sm text-gray-500">Bienvenido a tu panel financiero</p>
+            </div>
           </div>
           <Button variant="secondary" size="sm" onClick={() => setIsLoggedIn(false)}>
             Cerrar Sesión
@@ -211,7 +224,7 @@ export function ClientDashboard() {
                 </div>
                 <h3 className="text-lg font-medium text-gray-900">No tienes créditos activos</h3>
                 <p className="text-gray-500 mt-2 mb-6">¿Necesitas dinero extra hoy mismo?</p>
-                <Button onClick={() => window.location.href = '/'}>Solicitar Nuevo Crédito</Button>
+                <Button onClick={() => window.location.href = '/solicitar'}>Solicitar Nuevo Crédito</Button>
                 
                 {rejectedLoans.length > 0 && (
                    <div className="mt-8 pt-6 border-t">

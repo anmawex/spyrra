@@ -5,7 +5,8 @@ import dynamic from 'next/dynamic'
 import { Step1PersonalInfo } from '@/features/loans/components/wizard/Step1'
 import { Step2Identity } from '@/features/loans/components/wizard/Step2'
 import { useLoanStore } from '@/features/loans/store/useLoanStore'
-import { CheckCircle } from 'lucide-react'
+import { CheckCircle, ArrowLeft } from 'lucide-react'
+import Link from 'next/link'
 
 // Importación dinámica para evitar conflictos de SSR con Apollo Client
 const Step3Summary = dynamic(() => import('@/features/loans/components/wizard/Step3').then(mod => mod.Step3Summary), { 
@@ -57,10 +58,18 @@ export function LoanApplication() {
   const { currentStep } = useLoanStore()
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50/30 flex flex-col items-center py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50/30 flex flex-col items-center py-12 px-4 sm:px-6 lg:px-8 relative">
       
+      {/* Botón Volver */}
+      <div className="absolute top-4 left-4 z-10">
+        <Link href="/" className="flex items-center gap-2 text-gray-500 hover:text-blue-600 font-medium transition-colors bg-white/50 hover:bg-white px-4 py-2 rounded-full backdrop-blur-sm border border-transparent hover:border-gray-200">
+          <ArrowLeft className="w-4 h-4" />
+          <span className="text-sm">Volver al Inicio</span>
+        </Link>
+      </div>
+
       {/* Header Visual */}
-      <div className="text-center mb-12 max-w-2xl">
+      <div className="text-center mb-12 max-w-2xl mt-8">
         <h1 className="text-4xl font-extrabold text-gray-900 tracking-tight sm:text-5xl mb-4">
           Tu crédito en minutos
         </h1>

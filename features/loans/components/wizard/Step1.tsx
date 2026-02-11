@@ -15,7 +15,7 @@ export function Step1PersonalInfo() {
     handleSubmit, 
     formState: { errors, isValid } 
   } = useForm<PersonalInfoInputs>({
-    resolver: zodResolver(personalInfoSchema),
+    resolver: zodResolver(personalInfoSchema) as any,
     defaultValues: {
       fullName: wizardData.fullName,
       email: wizardData.email,
